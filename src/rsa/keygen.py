@@ -1,5 +1,6 @@
 import math 
-from math_utils import generate_prime, mod_inverse
+import random
+from .math_utils import generate_prime, mod_inverse
 
 def generate_keys(min, max):
     p = generate_prime(min, max)

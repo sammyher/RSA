@@ -12,8 +12,10 @@ def is_prime(n):
 
 # generates random prime number between min and max
 def generate_prime(min, max):
-    prime = [n for n in range(min, max) if is_prime(n)]
-    
+    prime = random.randint(min, max)
+    while not is_prime(prime):
+        prime = random.randint(min, max)
+    return prime
 
 # mod inverse of a number e mod phi
 def mod_inverse(e, phi):

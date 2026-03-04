@@ -24,7 +24,7 @@ def encrypt_text(text: str, public_key: tuple) -> list:
     
     for char in text:
         char_int = ord(char)
-        encrypted_int = encrypt(char_int, pulic_key)
+        encrypted_int = encrypt(char_int, public_key)
         encrypted.append(encrypted_int)
     
     return encrypted
