@@ -28,10 +28,9 @@ def main():
 
     if args.command == "keygen":
         public_key, private_key = generate_keys(args.min, args.max)
-        print(f"\n[+] Public Key: -e {public_key[0]}")
-        print(f"[+] Private Key: -d {private_key[0]}")
-        print(f"[+] Modulus: -n {public_key[1]}")
-        print("\nSave these numbers! You need them to encrypt and decrypt.")
+        print(f"\n[+] Public Key (e, n): ({public_key[0]}, {public_key[1]})")
+        print(f"[+] Private Key (d, n): ({private_key[0]}, {private_key[1]})")
+        print("\nSave these pairs! You need the Public Key to encrypt and the Private Key to decrypt.")
     elif args.command == "encrypt":
         public_key = (args.e, args.n)
         encrypted = encrypt_text(args.message, public_key)
